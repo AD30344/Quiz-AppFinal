@@ -1,71 +1,87 @@
 'use strict';
 
 const STORE = {
-  questions: [
-    {
-      question: 'What does Html stand for?',
-      answers: ["Hyper Text Makeup Language", "Hyper Text Markup Language", "How to make lunch", "Hyper Tone Markup Language"],
-      correctAnswer: 'Hyper Text Markup Language' , true
-    }
-  ],
-  
-  quizEnded: false,
-  questionNum: 1,
-  quizScore: 1,
+
 
   questions: [
+
+    {
+      question: 'What does HTML stand for?',
+      answers: [
+        'How to Make Lunch',
+        'Hyper Text Makeup Language',
+        'Hyper Tone Markup Language',
+        'Hyper Text Markup Language'
+      ],
+      correctAnswer: 'Hyper Text Markup Language',
+      variables: {
+        name: 'html',
+        
+      }
+
+    },
+    {
+      question: 'jQuery is a:',
+      answers: [
+        'Javascript Framework',
+        'Media Query',
+        'Javascript Library',
+        'Function'
+      ],
+      correctAnswer: 'Javascript Library',
+      variables: {
+        name: 'jquery',
+       
+
+      }
+    },
     {
       question: 'What is OOP?',
-      answers: ["Optional Object Parameter", "Over Objective Programming", "Object Oriented Programming", "Open Objective Parameter"],
-      correctAnswer: "Object Oriented Programming" , true
-    }
-  ],
-  quizEnded: false,
-  questionNum: 2,
-  quizScore: 1,
-
-  questions: [
+      answers: [
+        "Optional Object Parameter",
+        "Over Objective Programming",
+        "Object Oriented Programming",
+        "Open Objective Parameter"
+      ],
+      correctAnswer: 'Object Oriented Programming',
+      variables: {
+        name: 'oop',
+        
+      }
+    },
     {
       question: "What type of programming language is Javascript?",
-      answers: ["Procedural", "Functional", "Object Oriented", "Database"],
-      correctAnswer: "Object Oriented", true
-    }
-  ],
-  quizEnded: false,
-  questionNum: 3,
-  quizScore: 1,
+      answers: [
+        "Procedural",
+        "Functional",
+        "Object Oriented",
+        "Database"
+      ],
+      correctAnswer: 'Object Oriented',
+      variables: {
+        name: 'js',
+       
 
-  questions: [
+      }
+    },
     {
-      question: 'What is type of language is Python?',
-      answers: ["Functional Programming", "Procedural", "Object Oriented Programming", "Database"],
-      correctAnswer: "Database" , true
-    }
-  ],
-  quizEnded: false,
-  questionNum: 4,
-  quizScore: 1,
+      question: "What type of programming language is Python?",
+      answers: [
+        "Database",
+        "Procedural",
+        "Functional",
+        "Object Oriented"
 
-  questions: [
-    {
-      question: 'What is JQuery?',
-      answers: ["A Framework", "A Media Query", "A Javascript Library", "A Function"],
-      correctAnswer: "A Javascript Library" , true
+      ],
+      correctAnswer: 'Database',
+      variables: {
+        name: 'python',
+        
+
+      }
     }
   ],
-  quizEnded: true,
-  questionNum: 5,
-  quizScore: 1,
+  quizStarted: false,
+  questionNumber: 0,
+  score: 0
 }
-  //we need a counter to keep track of which page we are on
-  //how do we move this counter forward when the 
-
-
-    //this is where we should store the object that counts right
-    //answers???
-
-
-
-//instead of having h1 and h2, we could just increase the size
-//of h1, add a class of larger and alter in css.
-//I think that would fix alignment issues
