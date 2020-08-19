@@ -6,7 +6,7 @@ const STORE = {
   questions: [
 
     {
-      question: 'What does HTML stand for?',
+      question: '1.What does HTML stand for?',
       answers: [
         'How to Make Lunch',
         'Hyper Text Makeup Language',
@@ -14,14 +14,15 @@ const STORE = {
         'Hyper Text Markup Language'
       ],
       correctAnswer: 'Hyper Text Markup Language',
+      //remove and simplify
       variables: {
         name: 'html',
-        
+        value: ['oneFalse', 'twoFalse', 'threeFalse', 'fourTrue']
       }
 
     },
     {
-      question: 'jQuery is a:',
+      question: '2.jQuery is a:',
       answers: [
         'Javascript Framework',
         'Media Query',
@@ -31,12 +32,12 @@ const STORE = {
       correctAnswer: 'Javascript Library',
       variables: {
         name: 'jquery',
-       
+        value: ['oneFalse', 'twoFalse', 'threeTrue', 'fourFalse']
 
       }
     },
     {
-      question: 'What is OOP?',
+      question: '3.What is OOP?',
       answers: [
         "Optional Object Parameter",
         "Over Objective Programming",
@@ -46,11 +47,11 @@ const STORE = {
       correctAnswer: 'Object Oriented Programming',
       variables: {
         name: 'oop',
-        
+        value: ['oneFalse', 'twoFalse', 'threeFalse', 'fourTrue']
       }
     },
     {
-      question: "What type of programming language is Javascript?",
+      question: "4.What type of programming language is Javascript?",
       answers: [
         "Procedural",
         "Functional",
@@ -60,12 +61,12 @@ const STORE = {
       correctAnswer: 'Object Oriented',
       variables: {
         name: 'js',
-       
+        value: ['oneFalse', 'twoFalse', 'threeFalse', 'fourTrue']
 
       }
     },
     {
-      question: "What type of programming language is Python?",
+      question: "5.What type of programming language is Python?",
       answers: [
         "Database",
         "Procedural",
@@ -76,7 +77,7 @@ const STORE = {
       correctAnswer: 'Database',
       variables: {
         name: 'python',
-        
+        value: ['oneTrue', 'twoFalse', 'threeFalse', 'fourFalse']
 
       }
     }

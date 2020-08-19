@@ -125,34 +125,3 @@ main .question-score >*{
     font-size: 1.6em;
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*MEDIA QUERIES*/
-@media all and (min-width: 600px){
-    main{
-        padding-top: 0;
-    }
-    main h2{
-        font-size: 5vw;
-    }
-
-
-    main h3{
-        font-size: 2vw;
-    }
-
-    main > *{
-        padding-left: 5vw;
-    }
-
-}
