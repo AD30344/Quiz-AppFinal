@@ -1,134 +1,96 @@
+/*we need to make the position of the button static, based on px amount from
+left so that it doesn't move every time we answer a question
+button should have absolute positioning??? 
+SET WIDTH OF MAIN AS VH UNITS
+position button (align-self) at bottom of main
+set margin to MAIN VH - 100
+ctrl + shift + l*/
 *{
     box-sizing: border-box;
 }
-
 body{
+    
     padding: 0;
-    margin: 0; 
+    margin: 0;
     font-family: 'Anonymous Pro', 'roboto', sans-serif;
     width: 100vw;
+    background-color: yellowgreen;
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(8, 6%, 20%);
-    color: hsl(127, 70%, 60%);
+    
 }
 
 main{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding: 1vh 1vw;
-    margin: 3vh 2vw;
-}
-
-main .box{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    align-items: center;
-}
-main form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     align-items: flex-start;
-    font-size: 1.4em;
-}
-main h1{
-    font-size: 3em;
+    background-color: yellowgreen;
+    height: 80vh;
+    text-align: left;
+    margin: 0 5vh;
 }
 
-main h2{
-    font-size: 2.2em;
+main > *{
+    padding-left: 2vw;
+}
+
+main .answer{
+    padding-bottom: 20px;
+}
+
+main h1{
+    font-size: 4vw;
+}
+
+main label{
+    font-size: 1em;
 }
 
 main h3{
-    font-size: 2.3;
-    color: hsl(127, 92%, 60%);
+    font-size: 1.2em;
+    color: red;
 }
 
-main button{
+
+main button {
     width: 200px;
     height: 50px;
     border: 1px solid #25090F;
     background-color: #25090F;
-    color: hsl(165, 70%, 70%);
+    color: #f2f2f2;
     outline: none;
     text-align: center;
     font-weight: bold;
-    margin-top: 4vh;
-    align-self: center;
-    font-size: 1.4em;
+    margin: 5vh 0;
+    
 }
 
-main div form button{
-    align-self: center;
+.main button{
+    height: 75px;
+    width: 300px;
+    font-size: 1.2em;
+    color: red;
 }
 
 main button:active{
     border: 1px solid #25090F;
 }
 
-main .main-page{
-    display: flex;
 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-main .main-page > *{
-    display: block;
-}
 
 main .question-score{
-    color: hsl(165, 70%, 70%);
+    align-self: center;
+    margin-bottom: 3vh;
+    color: 
+}
+
+html form{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1.2em;
+    justify-content: space-between;
+    align-items: flex-start;
 }
-
-main div .questionNumber{
-    font-weight: bolder;
-}
-
-main .question-score >*{
-    padding: 1vh;
-}
-
-
-@media all and (min-width: 800px){
-    main{
-        padding: 1vh 1vw;
-    margin: 1vh 1vw;
-    }
-   main h1{
-    font-size: 5em;
-   }
-
-   main h2{
-       font-size: 5em;
-
-   }
-   main h3{
-
-    font-size: 2em;
-   }
-
-   main form{
-    font-size: 1.6em;
-   }
-}
-
-
-
-
 
 
 
@@ -141,18 +103,32 @@ main .question-score >*{
 @media all and (min-width: 600px){
     main{
         padding-top: 0;
+        margin-top: 0;
+        height: 90vh;
+        margin-left: 5vw;
+        padding: 8vh 0;
     }
-    main h2{
-        font-size: 5vw;
+   main h1{
+        color: red;
+        font-size: 6vw;
     }
-
 
     main h3{
-        font-size: 2vw;
+        font-size: 5vh;
+    }
+
+    main label{
+        font-size: 4vh;
+    }
+
+    
+
+    main button{
+        margin-top: 9vh;
     }
 
     main > *{
-        padding-left: 5vw;
+        padding-left: 6vw;
     }
 
 }

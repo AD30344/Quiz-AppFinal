@@ -183,11 +183,6 @@ function main() {
 }
 
 
-
-
-
-
-
 //event handlers for buttons and submitting answers
 
 $('main').on('click', '.button', nextQuestion);
