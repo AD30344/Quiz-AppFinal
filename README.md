@@ -1,2 +1,2 @@
 # Quiz-AppFinal
-Worked a s a pair with Rachel Reilly
+Worked as a pair with Rachel Reilly
