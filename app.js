@@ -13,17 +13,24 @@ function generateMainPage() {
 }
 
 
-function generateTitle(){
+function generateTitle() {
   const title = '<h3>Coding quiz</h3>';
   return title;
 }
 
-
+function generateOption(option) {
+  return (
+    `<div class="radioButton">
+      <input type="radio" id="ans1" name="answers" value="${option}">
+      <label for="ans1">${option}</label><br>
+    </div>`
+  );
+}
 
 
 //Generate the questions
 function nextQuestion() {
-  
+
   let title = generateTitle();
 
   let questionNumber = STORE.questionNumber;
@@ -38,26 +45,11 @@ function nextQuestion() {
   const trackScore = `<div class='trackScoreHtml'>${STORE.score}/${questionNumber} correct</div>
         <div class='trackScoreHtml'>${numberWrong}/${questionNumber} wrong</div>`;
   const questionAndScore = `<div class = 'question-score'>${questionNumberHtml}${trackScore}</div>`;
-
+  const answerNodes = question.answers.map(answer => generateOption(answer));
   const questionHtml = `<div class ="box"> 
             <h3 class= "question"> ${question.question} </h3>
         <form class="form" >
-          <div class="radioButton">
-            <input type="radio" id="ans1" name="answers" value="${question.answers[0]}">
-            <label for="ans1">${question.answers[0]}</label><br>
-          </div>
-          <div class="radioButton">
-            <input type="radio" id="ans2" name="answers" value="${question.answers[1]}">
-            <label for="ans2">${question.answers[1]}</label>
-          </div>
-          <div class="radioButton">
-            <input type="radio" id="ans3" name="answers" value="${question.answers[2]}">
-            <label for="ans3">${question.answers[2]}</label>
-          </div>
-          <div>
-            <input type="radio" id="ans4" name="answers" value="${question.answers[3]}">
-            <label for="ans4">${question.answers[3]}</label></br> 
-          </div>
+       ${answerNodes.join("")}
           <button class="checkAnswer" type="submit" id="submit">submit</button>
     </form>
     </div>`;
@@ -99,7 +91,7 @@ function wrong() {
   const questionNumberHtml = `<div class='questionNumber'>Question ${questionNumber}/5</div>`;
   const trackScore = `<div class='trackScoreHtml'>${STORE.score}/${questionNumber} correct</div>
   <div class='trackScoreHtml'>${numberWrong}/${questionNumber} wrong</div>`;
-  
+
   const questionAndScore = `<div class = 'question-score'>${questionNumberHtml}${trackScore}</div>`;
 
   const correctAnswer = STORE.questions[STORE.questionNumber].correctAnswer;
@@ -194,6 +186,6 @@ $('main').on('click', '.checkAnswer', answerSubmit);
 $('main').on('click', '.play-again', playAgain);
 
 
-  // do your stuff here
+// do your stuff here
 
 $(main);
